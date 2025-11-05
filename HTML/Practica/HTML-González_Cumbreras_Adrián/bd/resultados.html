@@ -21,7 +21,10 @@
 
 <p>En primer lugar observe <strong>la siguiente figura</strong>:</p>
 
-<img src="../figuras/tabla-examen-html.png" alt="Tabla con notas de examen" width="434" height="124">
+<!-- figure sirve para etiquetar algo que se menciona como figura -->
+<figure>
+  <img src="../figuras/tabla-examen-html.png" alt="Tabla con notas de examen" width="434" height="124">
+</figure>
 
 <p>Ahora codifique una tabla HTML que represente la información de la figura anterior. Le recordamos que lo importante es la semántica, no la presentación.</p>
 
@@ -30,35 +33,35 @@
 <table border="1">
   <caption>Resultados Módulo</caption>
   <tr>
-    <th scope="row">Examen</th>
-    <th scope="row">Aprobados</th>
-    <th scope="row">Suspensos</th>
-    <th scope="row">No Presentados</th>
-    <th scope="row">Total</th>
+    <th scope="col">Examen</th>
+    <th scope="col">Aprobados</th>
+    <th scope="col">Suspensos</th>
+    <th scope="col">No Presentados</th>
+    <th scope="col">Total</th>
   </tr>
   <tr>
-    <th scope="col">1ª Ev</th>
+    <th scope="row">1ª Ev</th>
     <td colspan="2">8</td>
      <!--<td></td>-->
     <td>14</td>
     <td>30</td>
   </tr>
   <tr>
-    <th scope="col">2ª Ev</th>
+    <th scope="row">2ª Ev</th>
     <td rowspan="2">9</td>
     <td>7</td>
     <td>9</td>
     <td>26</td>
   </tr>
   <tr>
-    <th scope="col">3ª Ev</th>
+    <th scope="row">3ª Ev</th>
     <!-- <td></td> -->
     <td rowspan="2" colspan="2">6</td>
     <!--<td></td>-->
     <td>21</td>
   </tr>
   <tr>
-    <th scope="col">Final</th>
+    <th scope="row">Final</th>
     <td>6</td>
     <!--<td></td>
     <td></td>-->

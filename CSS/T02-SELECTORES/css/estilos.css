@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    color: blue;
+}
+
+/* desendente */
+section p {
+    color: green;
+}
+
+section aside p {
+    color: brown;
+}
+
+/* agrupacion */
+h1,
+h2,
+h3 {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+/* selector de clase */
+.novedad {
+    background-color: cyan;
+}
+
+.novedad.urgente {
+    color: tomato;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */

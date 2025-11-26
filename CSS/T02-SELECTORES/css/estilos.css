@@ -32,6 +32,16 @@ h3 {
     color: tomato;
 }
 
+/* selector de id */
+#resumen {
+    text-align: center;
+}
+
+/* por ejemplo si usamos esta hoja de estilos como plantilla para varias paginas */
+p#resumen {
+    text-align: center;
+}
+
 /* * {
     margin: 0;
     padding: 0;

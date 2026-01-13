@@ -1,38 +1,39 @@
-/* avanzados.css */
+/* SELECTORES AVANZADOS CSS */
 
-/* atributos */
-[title] {
-    background-color: red;
-}
-
-/* tittle que contenga la palabra */
-[title*="pendiente"] {
-  background-color: black;
-}
-
-/* que acabe por .pdf */
-[href$=".pdf"] {
-  background-color: salmon;
-}
-
-/* sibling */
-h3 ~ h4 {
-    background-color: lightgoldenrodyellow;
-}
-
-/* adyacente */
-h1 + p, 
-h2 + p {
-    background-color: lime;
-}
-
-/* hijo */
+/* SELECTOR HIJO (Algo que está directamente dentro de algo (primer nivel), es hijo directo, no nieto)*/
 article > p {
   color: red;
   text-align: center;
 }
 
-article p {
-  color: blue;
-  font-style: italic;
+/* SELECTOR ADYACENTE (Algo que está al lado de algo, uno pegado a otro, en el mismo nivel, serían hermanos) (EL orden importa) */
+h1 + p, 
+h2 + p {
+    background-color: lime;
+}
+
+/* SELECTOR SIBLING (Algo que sea hermano de algo, pueden haber elementos entre ellos. Si hay un h3, despues un parrafo, imagen, etc y despues un h4 de aplica) */
+h3 ~ h4 {
+    background-color: blue;
+}
+
+/* SELECETOR DE ATRIBUTOS (Si se encuentra un elemento que tenga el atributo tittle, da igual valor, etc, solo importa que tenga el atributo)*/
+[title] {
+    background-color: red;
+}
+ /* (modificar según el valor que tenga el atributo exactamente) */
+[title="pendiente"] {
+  background-color: black;
+}
+ /* (modificar según el valor que contenga el atributo) */
+[title*="pendiente"] {
+  background-color: greenyellow;
+}
+/* (modificar según en que acabe el valor (por .pdf)) */
+[href$=".pdf"] {
+  background-color: salmon;
+}
+/* (modificar según en que empiece el valor (por https://)) */
+[href^="https://"] {
+  background-color: pink;
 }

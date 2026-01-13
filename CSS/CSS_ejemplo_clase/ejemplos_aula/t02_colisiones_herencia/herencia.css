@@ -2,5 +2,13 @@
 
 section {
   color: blue;           /* se hereda */
+  font-style: italic;
   border: 2px solid red; /* no se hereda */
 }
+
+section h2 {
+  border: 2px solid green;
+}
+
+/* Hay propiedades que se heredan y otras que no */
+/* propiedades de texto se suelen heredar */

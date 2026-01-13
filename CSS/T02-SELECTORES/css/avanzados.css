@@ -5,6 +5,15 @@
     background-color: red;
 }
 
+/* tittle que contenga la palabra */
+[title*="pendiente"] {
+  background-color: black;
+}
+
+/* que acabe por .pdf */
+[href$=".pdf"] {
+  background-color: salmon;
+}
 
 /* sibling */
 h3 ~ h4 {

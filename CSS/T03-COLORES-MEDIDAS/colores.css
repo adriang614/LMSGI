@@ -1,0 +1,43 @@
+/* COLORES */
+h1 {
+    color: red;
+}
+
+h1 + p {
+    color: rgb(0,0,255);
+}
+
+p {
+    color: rgb(25%,20%,40%);
+}
+
+p {
+    color: #0af
+}
+
+:nth-child(4) {
+    color: rebeccapurple
+    /* tono saturacion luminicidad */
+}
+
+
+
+/* MEDIDAS */
+
+h1 {
+    font-size: 3em;
+    /* el triple que el tamaño definido por defecto */
+    margin-left: 2em;
+}
+
+p {
+    font-size: 50%;
+}
+
+
+
+/* ABSOLUTAS */
+
+section h2 {
+    font-size: 1.5cm;
+}

@@ -1,0 +1,63 @@
+/* BOX.CSS */
+
+
+/* BORDER-borde */
+p {
+    border: 4px red solid;  /*shorthand*/  /*dashed(discontinuo), dotted(punteado), double (doble)*/ 
+}
+
+h2 {
+    border-bottom-color: blue;
+    border-bottom-width: 4px;
+    border-bottom-style: double;
+    border-top: green dashed 2px;
+}
+
+/* triangulito del inspeccionar significa que es una propiedad que resume un monton de otras (shorthand) */
+
+
+
+/* PADDING-relleno (distancia entre el border y el contenido) */
+
+p {
+    padding: 2em; /*shorthand*/
+    padding-right: 0;
+    padding-top: 4em;
+    padding-left: 3em;
+}
+
+
+img {
+    border: 6px red double;
+    padding: 4em;
+}
+
+
+/* MARGING (del borde para afuer)*/
+
+p {
+    margin: 10px 20px 30px 40px; /*sentido de las agujas del reloj desde el superior*/ 
+    /* si pongo 3, el primero arriba y abajo, y el segundo derecha e izquierda */
+}
+
+img {
+    margin: 3em;;
+}
+
+
+
+/* BACKGROUND COLOR (cubre el contenido, llega al border y en el border se para) */
+
+p {
+    background-color: yellow;
+    background-image: url(Css48.png);
+    background-repeat: repeat-y;
+    background-position: right center;
+    padding-right: 48px; /*ancho de la imagen ENTRA EN EL EXAMEN*/
+}
+
+section {
+    background-color: cyan;
+}
+
+/* el color del margen es transparente */

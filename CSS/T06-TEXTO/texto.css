@@ -1,0 +1,77 @@
+/* texto.css */
+
+
+/* ------------ */
+/* FUENTE */
+/* ------------ */
+
+
+/* COLOR */
+h1 {
+    color: red;
+}
+
+
+/* TAMAÑO */
+h1 {
+    font-size: 1em;
+}
+
+
+/* NEGRITA */
+h1 {
+    font-weight: normal;
+}
+
+em {
+    font-weight: bold;
+}
+
+
+/* ITALICA */
+h1 {
+    font-style: italic;
+    border-bottom: 2px red solid;
+}
+
+em {
+    font-style: normal;
+    background-color: lightpink;
+}
+
+
+/* FAMILIA DE FUENTES */
+
+#fuentes p {
+    font-family: 'Courier New', Courier, monospace; /*serifa, remate del elemento decorativo mas elegante*/
+}
+
+section#fuentes h2 {
+    font: italic bold 32px monospace;
+}
+
+/* ------------ */
+/* ALINEACION */
+/* ------------ */
+
+h1 {
+    text-align: center;
+    text-decoration: underline turquoise 4px dotted; /*tipo, color, grosor y estilo*/
+    /* no es lo mismo subrayar el texto ponerle un borde abajo */
+    text-transform: lowercase;
+
+}
+
+
+#fuentes p {
+    text-align: center;
+}
+
+h2 + p {
+    text-transform: uppercase;
+    text-indent: 2em;
+}
+
+h3 {
+    font-variant: small-caps;
+}

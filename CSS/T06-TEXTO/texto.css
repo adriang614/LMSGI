@@ -67,6 +67,7 @@ h1 {
     text-align: center;
 }
 
+
 h2 + p {
     text-transform: uppercase;
     text-indent: 2em;
@@ -75,3 +76,21 @@ h2 + p {
 h3 {
     font-variant: small-caps;
 }
+
+/* ------------ */
+/* PSEUDOELEMENTOS */
+/* ------------ */
+
+h1::first-letter {
+    font-size: 4em;
+    background-color: pink;
+}
+
+h2 + p::first-line {
+    background-color: yellow;
+}
+
+/* ------------ */
+/* AMPLIA */
+/* ------------ */
+

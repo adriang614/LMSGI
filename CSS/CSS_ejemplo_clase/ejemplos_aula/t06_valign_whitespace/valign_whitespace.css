@@ -2,7 +2,7 @@
 
 /* en imágenes */
 article img {
-    vertical-align: default; /* probar middle, baseline (por defecto) */
+    vertical-align: middle; /* probar middle, baseline (por defecto) */
 }
 
 /* en texto inline */

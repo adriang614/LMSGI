@@ -1,0 +1,13 @@
+/* AMPLIA. */
+
+h1::before {
+    content: "Roberto homosexual";
+    background-color: yellow;
+}
+
+h2::after {
+    content: " - fin.";
+    font-style: italic;
+    color: red;
+}
+

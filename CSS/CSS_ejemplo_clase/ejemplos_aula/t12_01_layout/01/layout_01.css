@@ -1,0 +1,7 @@
+/* layout_01.css */
+
+div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em; /* shorthand */
+}

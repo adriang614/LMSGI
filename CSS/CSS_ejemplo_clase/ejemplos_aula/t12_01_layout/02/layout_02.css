@@ -1,0 +1,35 @@
+/* layout_02.css */
+
+div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2em;
+    /* la plantilla con "nombres" de áreas */
+    grid-template-areas:
+        "header  header"
+        "publi   contenidos"
+        "barra   contenidos"
+        "footer  footer" ;
+}
+
+/* Asociación elementos html con nombre áreas */
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: publi;
+}
+
+article {
+    grid-area: contenidos;
+}
+
+/* los nombres de área pueden ser nombre de elementos */
+nav {
+    grid-area: barra;
+}
+
+footer {
+    grid-area: footer;
+}

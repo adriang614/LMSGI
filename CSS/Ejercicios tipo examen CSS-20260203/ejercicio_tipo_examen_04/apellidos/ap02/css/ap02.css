@@ -1,0 +1,49 @@
+/*IMAGEN DE FONDO EN LOS ASIDE*/
+
+@font-face {
+    font-family: Kranky;
+    src: url(../fuentes/Kranky-Regular.ttf);
+}
+
+aside {
+    background-color: silver;
+    margin: auto;
+    width: 70%;
+    background-image: url(../figuras/Limav-Movie-Genres-Folder-Film-Noir.128.png);
+    background-repeat: repeat-x;
+    padding: 128px 2em 2em 2em;
+    margin-top: 3em;
+}
+
+header{
+    border-radius: 30px;
+    border: red;
+    border-style: dotted;
+    width: 65%;
+    margin: auto;
+    box-shadow: 26px 26px red;
+    margin-bottom: 4em;
+    padding: 1em;
+    padding-top: 2em; 
+    
+}
+
+header img {
+    float: left;
+    padding: 0.5em;
+}
+
+h1::first-letter, h2::first-letter{
+    font-family: Kranky;
+    font-size: 3em;
+    color: blue;
+}
+
+section ul {
+    font-family: Kranky;
+    list-style-type: circle;
+}
+
+section ul li:nth-child(4n+2) {
+    text-decoration: blue underline dashed 3px;
+}

@@ -1,0 +1,50 @@
+@font-face {
+    font-family: ofl;
+    src: url(fuentes/Pacifico/Pacifico-Regular.ttf);
+}
+
+footer ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+footer ol li {
+    background-color: lightyellow;
+    text-align: center;
+    border: 2px solid green;
+    padding: 0.5em;
+}
+
+footer ol li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: red;
+    display: block;
+}
+
+header h1 {
+    font-family: ofl, serif;
+    text-align: center;
+    border-bottom: 2px double black;
+}
+
+header blockquote {
+    border: 4px dotted orange;
+    padding: 2em;
+    border-radius: 2em;
+    text-align: left;
+    margin-right: 20px;
+}
+
+header blockquote::before {
+    content: "Cita: ";
+    font-weight: bold;
+}
+
+header cite::before {
+    content: "Autor: ";
+    font-weight: bold;
+}

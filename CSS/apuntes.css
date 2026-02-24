@@ -1,0 +1,718 @@
+/* SELECTORES */
+
+* {
+  margin: 0;
+  padding: 0;
+} /* Selecciona TODO */
+
+h1 {
+    color: aqua;
+} /* Normal */
+
+h1, h2, h3 {
+    color: red;
+} /* Varios con lo mismo */
+
+h1 p {
+    color: aliceblue;
+} /* Descendente (algo dentro de algo) */
+
+.clase {
+    font-style: italic;
+} /* Selector de clase */
+
+#id {
+    font-weight: bold;
+} /* Selector de id */
+
+p#id {
+    text-align: center;
+} /* Selector de etiqueta + id. Ambos se tienen que cumplir */
+
+p.clase#id {
+    text-decoration-color: aliceblue;
+} /* Selector de etiqueta + clase + id. Todos se tienen que cumplir */
+
+article > p {
+  color: red;
+  text-align: center;
+} /* SELECTOR HIJO (Algo que está directamente dentro de algo (primer nivel), es hijo directo, no nieto)*/
+
+h1 + p, 
+h2 + p {
+    background-color: lime;
+} /* Selector adyacente - hermanos (Algo que está al lado de algo, uno pegado a otro, en el mismo nivel, serían hermanos) (EL orden importa) */
+
+h3 ~ h4 {
+    background-color: blue;
+} /* Selector sibling (Algo que sea hermano de algo, pueden haber elementos entre ellos. Si hay un h3, despues un parrafo, imagen, etc y despues un h4 se aplica) */
+
+[title] {
+    background-color: red;
+} /* Selector de atributos (Si se encuentra un elemento que tenga el atributo tittle, da igual valor, etc, solo importa que tenga el atributo)*/
+
+[title="pendiente"] {
+  background-color: black;
+} /* (modificar según el valor que tenga el atributo exactamente) */
+
+[title*="pendiente"] {
+  background-color: greenyellow;
+} /* (modificar según el valor que contenga el atributo) */
+
+[href$=".pdf"] {
+  background-color: salmon;
+} /* (modificar según en que acabe el valor (por .pdf)) */
+
+[href^="https://"] {
+  background-color: pink;
+} /* (modificar según en que empiece el valor (por https://)) */
+
+a:hover {
+  color: red;
+} /* Cuando pasas el ratón por encima */
+
+a:active {
+  color: blue;
+} /* Cuando haces clic */
+
+a:visited {
+  color: purple;
+} /* Enlaces ya visitados */
+
+input:focus {
+  border-color: red;
+} /* Cuando un input tiene el foco (cursor dentro) */
+
+p:first-child {
+  color: green;
+} /* Primer hijo de su padre */
+
+p:last-child {
+  color: orange;
+} /* Último hijo de su padre */
+
+li:nth-child(odd) {
+  background: lightgray;
+} /* Hijos impares */
+
+li:nth-child(even) {
+  background: lightblue;
+} /* Hijos pares */
+
+li:nth-child(5) {
+  font-weight: bold;
+} /* El hijo número 5 */
+
+li:nth-child(n+5) {
+  color: red;
+} /* Del 5 en adelante */
+
+li:nth-child(2n+5) {
+  color: red;
+} /* Cada 2 empezando en el 5 en adelante */
+
+p:nth-of-type(2) {
+  color: brown;
+} /* Segundo <p> entre otros <p> (solo cuenta los del mismo tipo) */
+
+p::first-letter {
+  font-size: 2em;
+} /* Primera letra del párrafo */
+
+p::first-line {
+  color: blue;
+} /* Primera línea del párrafo */
+
+p::before {
+  content: attr(title);
+} /* Añade contenido ANTES del elemento y Muestra el valor de un atributo del elemento */
+
+p::after {
+  content: " ✔";
+} /* Añade contenido DESPUÉS del elemento */
+
+p:not(.importante) {
+  color: gray;
+} /* Selecciona p que NO tengan la clase .importante */
+
+input:required {
+  border: 2px solid red;
+} /* Campo obligatorio */
+
+input:valid {
+  background: lightgreen;
+} /* Valor válido */
+
+input:invalid {
+  background: pink;
+} /* Valor NO válido */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* UNIDADES DE MEDIDA */
+
+/* ABSOLUTAS (siempre valen lo mismo) */
+p {
+  font-size: 12pt;
+} /* pt = puntos (impresión) */
+
+div {
+  width: 5cm;
+} /* cm = centímetros */
+
+div {
+  width: 50mm;
+} /* mm = milímetros */
+
+div {
+  width: 2in;
+} /* in = pulgadas */
+
+
+/* RELATIVAS (dependen del contexto) */
+p {
+  font-size: 16px;
+} /* px = píxeles (relativo a la pantalla) */
+
+p {
+  font-size: 1em;
+} /* em = relativo al tamaño de la fuente del padre */
+
+p {
+  font-size: 1rem;
+} /* rem = relativo al tamaño de la raíz (html) */
+
+div {
+  width: 50%;
+} /* % = relativo al contenedor */
+
+div {
+  width: 50vw;
+  height: 50vh;
+} /* vw/vh = % del ancho/alto de la ventana */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* COLORES */
+
+/* NOMBRE DEL COLOR */
+p {
+  color: red;
+} /* Colores predefinidos */
+
+/* RGB */
+p {
+  color: rgb(255, 0, 0);
+} /* Rojo, Verde, Azul (0–255) */
+
+/* RGBA */
+p {
+  color: rgba(255, 0, 0, 0.5);
+} /* Rojo, Verde, Azul (0–255) con transparencia */
+
+/* HEXADECIMAL */
+p {
+  color: #ff0000;
+} /* Rojo */
+
+p {
+  color: #f00;
+} /* Rojo versión corta */
+
+/* HSL */
+p {
+  color: hsl(0, 100%, 50%);
+} /* Tono, saturación, luminosidad */
+
+/* HSLA */
+p {
+  color: hsla(0, 100%, 50%, 0.5);
+} /* HSL con transparencia */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* BOX MODEL → Cada elemento es una caja con 4 partes:
+   content → padding → border → margin */
+
+p {
+  width: 200px;
+  height: 100px;
+} /* Tamaño del contenido */
+
+p {
+  padding: 20px;
+} /* Espacio entre el contenido y el borde */
+
+p {
+  border: 2px solid black;
+} /* Grosor + estilo (solid, dotted, double, dashed) + color */
+
+div {
+  border-radius: 10px;
+} /* Redondea las esquinas del border */
+
+p {
+  margin: auto;
+} /* Espacio exterior de la caja. Centrar horizontalmente (si tiene width) */
+
+* {
+  box-sizing: border-box;
+} /* El width incluye padding y border (más fácil de maquetar) */
+
+div {
+  box-sizing: content-box;
+} /* El width NO incluye padding ni border (valor por defecto) */
+
+div {
+  box-shadow: 2px 2px 5px gray;
+} /* Sombra de la caja */
+
+div {
+  background-color: lightblue;
+} /* Color de fondo */
+
+div {
+  background-image: url("fondo.png");
+} /* Imagen de fondo */
+
+div {
+  background-repeat: repeat-x;
+} /* No repetir imagen */
+
+div {
+  background-size: cover;
+} /* La imagen cubre toda la caja */
+
+div {
+  background-position: center;
+} /* Centrar imagen */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* DISPLAY */
+
+div {
+  display: block;
+} /* Ocupa TODA la línea. Empieza en línea nueva. */
+
+span {
+  display: inline;
+} /* No rompe línea. No acepta width/height. */
+
+img {
+  display: inline-block;
+} /* No rompe línea y SÍ acepta width/height. */
+
+div {
+  display: none;
+} /* Elimina el elemento (no ocupa espacio). */
+
+div {
+  visibility: hidden;
+} /* Oculta el elemento PERO mantiene el espacio. */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* POSITION */
+
+div {
+  position: static;
+} /* Valor por defecto. NO se puede mover con top/left. */
+
+div {
+  position: relative;
+  top: 10px;
+  left: 20px;
+} /* Se mueve respecto a su posición original. */
+
+div {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+} /* Se posiciona respecto al primer padre con position distinto de static. */
+
+div {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+} /* Fijo en pantalla aunque hagas scroll. */
+
+div {
+  position: sticky;
+  top: 0;
+} /* Se queda pegado al llegar a ese punto al hacer scroll. */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* TEXTO */
+
+p {
+  text-align: center;
+} /* Alineación del texto (left, right, center, justify) */
+
+p {
+  text-decoration: underline;
+} /* Subrayado (underline, overline, line-through, none) */
+
+p {
+  text-transform: uppercase;
+} /* Transformación (uppercase, lowercase, capitalize) */
+
+p {
+  text-indent: 20px;
+} /* Sangría de la primera línea */
+
+p {
+  letter-spacing: 3px;
+} /* Espacio entre letras */
+
+p {
+  word-spacing: 10px;
+} /* Espacio entre palabras */
+
+p {
+  line-height: 1.5;
+} /* Altura de línea (separación vertical entre líneas) */
+
+p {
+  text-shadow: 2px 2px 5px black;
+} /* Sombra del texto */
+
+p {
+  white-space: nowrap;
+} /* No permite saltos de línea */
+
+p {
+  white-space: pre;
+} /* Respeta espacios y saltos tal cual (como <pre>) */
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+} /* Lista de fuentes */
+
+p {
+  font-size: 16px;
+} /* Tamaño del texto */
+
+p {
+  font-style: italic;
+} /* Cursiva */
+
+p {
+  font-weight: bold;
+} /* Negrita (100–900) */
+
+p {
+  font-variant: small-caps;
+} /* Mayúsculas pequeñas */
+
+p {
+  font-stretch: condensed;
+} /* Estrecha o expande la fuente (poco usado) */
+
+@font-face {
+  font-family: "MiFuente";
+  src: url("fuentes/MiFuente.ttf");
+} /* Cargar una fuente desde un archivo local */
+
+p {
+  font-family: "Roboto", sans-serif;
+} /* Igual que antes (link en el html) */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* ENLACES */
+
+a {
+  color: blue;
+} /* Color del enlace */
+
+a:hover {
+  color: red;
+} /* Cuando pasas el ratón por encima */
+
+a:active {
+  color: orange;
+} /* Cuando haces clic */
+
+a:visited {
+  color: purple;
+} /* Enlace ya visitado */
+
+a {
+  text-decoration: none;
+} /* Quitar el subrayado */
+
+a {
+  text-decoration: underline;
+} /* Poner subrayado */
+
+a {
+  cursor: pointer;
+} /* Cambia el cursor al de enlace */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* IMÁGENES */
+
+img {
+  width: 300px;
+} /* Ancho de la imagen */
+
+img {
+  height: 200px;
+} /* Alto de la imagen */
+
+img {
+  width: 100%;
+} /* Imagen ocupa todo el ancho del contenedor */
+
+img {
+  max-width: 100%;
+} /* La imagen NO se deforma, se adapta al contenedor */
+
+img {
+  display: block;
+} /* Quita el espacio inferior (las imágenes son inline por defecto) */
+
+img {
+  border-radius: 10px;
+} /* Esquinas redondeadas en imágenes */
+
+img {
+  object-fit: cover;
+} /* Recorta la imagen para que llene el espacio sin deformarse */
+
+img {
+  object-fit: contain;
+} /* Ajusta la imagen sin recortar (puede dejar huecos) */
+
+img {
+  object-position: center;
+} /* Posición de la imagen dentro del recorte */
+
+div {
+  background-image: url("fondo.jpg");
+} /* Poner una imagen de fondo */
+
+div {
+  background-repeat: no-repeat;
+} /* No repetir la imagen */
+
+div {
+  background-size: cover;
+} /* La imagen cubre todo el contenedor */
+
+div {
+  background-size: contain;
+} /* La imagen se ajusta sin recortar */
+
+div {
+  background-position: center;
+} /* Centrar la imagen */
+
+div {
+  background-attachment: fixed;
+} /* Efecto parallax (fondo fijo al hacer scroll) */
+
+img {
+  float: left;
+} /* La imagen se coloca a la IZQUIERDA y el texto fluye a su derecha */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* LISTAS */
+
+ul {
+  list-style-type: disc;
+} /* Viñetas normales (●) */
+
+ul {
+  list-style-type: circle;
+} /* Viñetas vacías (○) */
+
+ul {
+  list-style-type: square;
+} /* Viñetas cuadradas (■) */
+
+ol {
+  list-style-type: decimal;
+} /* 1, 2, 3... */
+
+ol {
+  list-style-type: upper-roman;
+} /* I, II, III... */
+
+ol {
+  list-style-type: lower-alpha;
+} /* a, b, c... */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+} /* Quitar viñetas (muy usado en menús) */
+
+ul {
+  list-style-position: inside;
+} /* La viñeta queda dentro del texto */
+
+ul {
+  list-style-position: outside;
+} /* La viñeta queda fuera (por defecto) */
+
+ul {
+  list-style-image: url("icono.png");
+} /* Usa una imagen como viñeta */
+
+li {
+  float: left;
+} /* Colocar los <li> en horizontal */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* TABLAS */
+
+table {
+  width: 100%;
+} /* Ancho de la tabla */
+
+table, th, td {
+  border: 1px solid black;
+} /* Bordes de tabla y celdas */
+
+table {
+  border-collapse: collapse;
+} /* Junta los bordes (muy usado) */
+
+th, td {
+  padding: 10px;
+} /* Espacio interno de las celdas */
+
+th {
+  background-color: lightgray;
+} /* Fondo para encabezados */
+
+td {
+  text-align: center;
+} /* Centrar texto en celdas */
+
+td {
+  vertical-align: middle;
+} /* Centrar verticalmente */
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+} /* Filas pares */
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+} /* Filas impares */
+
+tr:hover {
+  background-color: lightyellow;
+} /* Resaltar fila al pasar el ratón */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* FORMULARIOS */
+
+input, select, textarea {
+  width: 100%;
+} /* Que ocupen todo el ancho */
+
+input, select, textarea {
+  padding: 10px;
+} /* Espacio interno */
+
+input, select, textarea {
+  margin-bottom: 10px;
+} /* Separación entre campos */
+
+input, select, textarea {
+  border: 1px solid #ccc;
+} /* Borde básico */
+
+input:focus, textarea:focus {
+  border-color: blue;
+  outline: none;
+} /* Estilo cuando haces clic en el campo */
+
+label {
+  display: block;
+  margin-bottom: 5px;
+} /* Que el label quede encima del input */
+
+button, input[type="submit"] {
+  background: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+} /* Botón básico */
+
+button:hover {
+  background: darkblue;
+} /* Efecto hover */
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+} /* Evitar que ocupen 100% si usas estilos globales */
+
+input:disabled {
+  background: #eee;
+} /* Campo desactivado */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* LAYOUT */
+
+.contenedor {
+  display: grid;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+} /* 3 columnas iguales */
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+} /* 3 columnas fijas */
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+} /* 4 columnas iguales (forma corta) */
+
+.contenedor {
+  grid-template-rows: 100px 100px;
+} /* 2 filas de 100px */
+
+.contenedor {
+  gap: 20px;
+} /* Espacio entre filas y columnas */
+
+.contenedor {
+  column-gap: 20px;
+  row-gap: 10px;
+} /* Separación específica */
+
+.item1 {
+  grid-column: span 2;
+} /* Ocupa 2 columnas */
+
+.item1 {
+  grid-column: 1 / 4;
+} /* Desde la línea 1 hasta la 4 */
+
+.item2 {
+  grid-row: span 2;
+} /* Ocupa 2 filas */
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+} /* Se adapta al ancho de pantalla */
